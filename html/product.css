@@ -20,6 +20,7 @@ body {
     display: flex;
     align-items: center;
     align-items: center;
+    flex-direction: row;
     width: 100%;
     margin: auto;
     max-width: 600px;
@@ -30,11 +31,100 @@ body {
     overflow: hidden;
 }
 
+@media (max-width: 769px) {
+    .card {
+        flex-direction: column;
+    }
+    .card__texte {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+
 .card__image {
-    position: absolute;
     display: flex;
     max-width: 300px;
     max-height: 450px;
     height: 100%;
     width: 50%;
-    }
+    
+    
+}
+
+.card__texte {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 25px;
+    width: 50%;
+    /* margin-bottom: 50px; */
+    text-align: left;
+}
+
+.card__texte--title {
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #6C7289;
+    font-family: montserrat, sans-serif;
+    letter-spacing: 5px;
+}
+
+.card__texte--H1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #1C232B;
+    font-family: Outfit, sans-serif;
+    font-weight: 600;
+}
+
+.card__texte--desc {
+    font-size: 14px;
+    color: #6C7289;
+    margin-top: auto; 
+    font-family: montserrat, sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.card__prix {
+    display: flex;
+    align-items: center;
+}
+
+.card__texte--prix1{
+    font-size: 32px;
+    color: #3D8168;
+    font-weight: 600;
+    margin-right: 30px;
+}
+
+.card__texte--prix2{
+    color: #6C7289;
+    font-size: 13px;
+    position: relative;
+   
+}
+
+.card__add {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #3D8168;
+    height: 48px;
+    width: 236px;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+    box-shadow: 0px 10px 16px cadetblue;
+}
+
+.card__add--icon {
+    margin-right: 10px;
+}
